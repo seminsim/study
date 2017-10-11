@@ -1,0 +1,42 @@
+main.cpp:17:13: error: wrong number of template arguments (1, should be 4)
+ map< map<int> > w;
+             ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from main.cpp:3:
+/usr/include/c++/4.8/bits/stl_map.h:96:11: error: provided for ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’
+     class map
+           ^
+main.cpp:17:15: error: wrong number of template arguments (1, should be 4)
+ map< map<int> > w;
+               ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from main.cpp:3:
+/usr/include/c++/4.8/bits/stl_map.h:96:11: error: provided for ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’
+     class map
+           ^
+main.cpp:17:18: error: invalid type in declaration before ‘;’ token
+ map< map<int> > w;
+                  ^
+main.cpp: In function ‘void input()’:
+main.cpp:26:5: error: request for member ‘clear’ in ‘w’, which is of non-class type ‘int’
+   w.clear();
+     ^
+main.cpp:32:13: error: invalid types ‘int[int]’ for array subscript
+     w[from-1][to-1] = weight;
+             ^
+main.cpp:33:13: error: invalid types ‘int[int]’ for array subscript
+     w[from-1][to-1] = weight;
+             ^
+main.cpp: In function ‘int search()’:
+main.cpp:71:27: error: invalid types ‘int[int]’ for array subscript
+     for (auto it=w[minNode].begin(); it!=w[minNode].end(); ++it) {
+                           ^
+main.cpp:71:51: error: invalid types ‘int[int]’ for array subscript
+     for (auto it=w[minNode].begin(); it!=w[minNode].end(); ++it) {
+                                                   ^
+main.cpp:74:24: error: invalid types ‘int[int]’ for array subscript
+       cur_w = w[minNode][i];
+                        ^
+main.cpp:74:26: error: ‘i’ was not declared in this scope
+       cur_w = w[minNode][i];
+                          ^
