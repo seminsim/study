@@ -1,0 +1,44 @@
+https://www.hackerrank.com/challenges/hacker-country
+
+Hacker Country
+
+There are N cities in Hacker Country. Each pair of cities are directly connected by a unique directed road, and each road has its own toll that must be paid every time it is used. You're planning a road trip in Hacker Country, and its itinerary must satisfy the following conditions:
+
+You can start in any city.
+You must use 2 or more different roads (meaning you will visit 2 or more cities).
+At the end of your trip, you should be back in your city of origin.
+The average cost (sum of tolls paid per road traveled) should be minimum.
+Can you calculate the minimum average cost of a trip in Hacker Country?
+
+Time Limits
+Time limits for this challenge are provided here.
+
+Input Format
+
+The first line is an integer, N (number of cities).
+The N subsequent lines of N space-separated integers each describe the respective tolls or traveling from city ito city j; in other words, the  jthinteger of the ith line denotes the toll for traveling from city i to city j.
+
+Note: As there are no roads connecting a city to itself, the ith integer of line i will always be .
+
+Constraints
+
+1 < N <= 500
+0 < toll cost <= 200
+roads traveled >= 2
+
+
+Output Format
+
+Print the minimum cost as a rational number p/q (tolls paid over roads traveled). The greatest common divisor of p and q should be 1.
+
+Sample Input
+
+2
+0 1
+2 0
+Sample Output
+
+3/2
+Explanation
+
+The toll from city c0 to city c1 is 1. The toll from c1 to c0 is 2. Your travel cost p = 1 + 2 = 3. Your number of roads traveled is q=2. Thus, we print 3/2 as our answer.
