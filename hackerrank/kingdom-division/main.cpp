@@ -3,9 +3,6 @@
 #include <vector>
 #include <iostream>
 
-#define DEBUG 0
-#define ONDEBUG if(DEBUG)
-
 using namespace std;
 
 typedef long long int dt;
@@ -32,9 +29,7 @@ NodeState nodeCases(int nodeId, int parentId = -1)
 {
   int size = neighbor[nodeId].size() + (parentId < 0 ? 1 : 0);
 
-  ONDEBUG cout << "node " << nodeId << " size=" << size << endl;
   if (size == 1) {
-    ONDEBUG cout << "node " << nodeId << " (1,0,1,0)" << endl;
     return make_tuple(1,0,1,0);
   }
 
@@ -62,8 +57,6 @@ NodeState nodeCases(int nodeId, int parentId = -1)
   }
   Crc += MOD_DIVIEND - Cri;
   Cbc += MOD_DIVIEND - Cbi;
-
-  ONDEBUG cout << "node " << nodeId << " (" << Cri << "," << Crc << "," << Cbi << "," << Cbc << ")" << endl;
 
   return make_tuple(
     Cri % MOD_DIVIEND,
