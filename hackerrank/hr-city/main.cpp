@@ -19,14 +19,6 @@ void input()
   }
 }
 
-dt addmod( dt x, dt y, dt m )
-{
-  x %= m;
-  y %= m;
-  dt sum = x-m+y; // -m <= sum < m-1
-  return sum < 0 ? sum + m : sum;
-}
-
 dt timesmod( dt x, dt y, dt m )
 {
   x %= m;
@@ -34,8 +26,8 @@ dt timesmod( dt x, dt y, dt m )
   dt a = x < y ? x : y; // min
   dt b = x < y ? y : x; // max
   dt product = 0;
-  for (; a != 0; a >>= 1, b = addmod(b,b,m) )
-    if (a&1) product = addmod(product,b,m);
+  for (; a != 0; a >>= 1, b = (b+b)%m )
+    if (a&1) product = (product+b)%m);
   return product;
 }
 
